@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AKANA — Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* tiny utilities for mockup polish */
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,.08); }
+    .no-scrollbar::-webkit-scrollbar{ display:none; } .no-scrollbar{ -ms-overflow-style:none; scrollbar-width:none; }
+  </style>
+</head>
+<body class="bg-[#0B1F3A] text-white selection:bg-white/20">
+  <!-- Sticky translucent header -->
+  <header class="fixed inset-x-0 top-0 z-50">
+    <div class="mx-auto max-w-7xl px-4">
+      <nav class="mt-4 flex items-center justify-between rounded-2xl glass border border-white/10 px-4 py-3">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/akana-logo.png" alt="AKANA" class="h-9 w-auto">
+          <span class="font-semibold tracking-wide">AKANA</span>
+        </a>
+        <input id="nav" type="checkbox" class="hidden">
+        <label for="nav" class="md:hidden cursor-pointer px-3 py-2 rounded-lg hover:bg-white/10">☰</label>
+        <ul class="hidden md:flex items-center gap-6 text-sm">
+          <li><a class="hover:underline" href="about.html">About</a></li>
+          <li><a class="hover:underline" href="join.html">Membership</a></li>
+          <li><a class="hover:underline" href="mentorship.html">Training</a></li>
+          <li><a class="hover:underline" href="events.html">Events</a></li>
+          <li><a class="hover:underline" href="news.html">News</a></li>
+          <li><a class="hover:underline" href="contact.html">Contact</a></li>
+          <li>
+            <a href="join.html" class="px-4 py-2 rounded-xl bg-white text-[#0B1F3A] font-semibold">Join</a>
+          </li>
+          <li>
+            <a href="donate.html" class="px-4 py-2 rounded-xl bg-gradient-to-r from-[#0E4B9B] via-[#137347] to-[#C81E1E] font-semibold shadow-lg">Donate</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- mobile dropdown -->
+      <div class="md:hidden px-2" id="mobileMenu" style="display:none">
+        <div class="mt-2 rounded-2xl glass border border-white/10 p-3 space-y-2 text-sm">
+          <a class="block px-3 py-2 rounded-lg hover:bg-white/10" href="about.html">About</a>
+          <a class="block px-3 py-2 rounded-lg hover:bg-white/10" href="join.html">Membership</a>
+          <a class="block px-3 py-2 rounded-lg hover:bg-white/10" href="mentorship.html">Training</a>
+          <a class="block px-3 py-2 rounded-lg hover:bg-white/10" href="events.html">Events</a>
+          <a class="block px-3 py-2 rounded-lg hover:bg-white/10" href="news.html">News</a>
+          <a class="block px-3 py-2 rounded-lg hover:bg-white/10" href="contact.html">Contact</a>
+          <div class="flex gap-2">
+            <a href="join.html" class="flex-1 text-center px-4 py-2 rounded-xl bg-white text-[#0B1F3A] font-semibold">Join</a>
+            <a href="donate.html" class="flex-1 text-center px-4 py-2 rounded-xl bg-gradient-to-r from-[#0E4B9B] via-[#137347] to-[#C81E1E] font-semibold">Donate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO / FUNDRAISING -->
+  <section class="relative pt-28">
+    <div class="absolute inset-0 -z-10 bg-[url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center opacity-30"></div>
+    <div class="mx-auto max-w-7xl px-4 py-20">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-wider">
+          Major Campaign
+          <span class="h-2 w-2 rounded-full bg-[#C81E1E] animate-pulse"></span>
+          Scholarship & Kenya Mission 2026
+        </span>
+        <h1 class="mt-6 text-4xl md:text-6xl font-extrabold leading-tight">Rooted in Heritage. <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0E4B9B] via-[#137347] to-[#C81E1E]">Driven by Care.</span></h1>
+        <p class="mt-5 text-white/80 text-lg">Your gift powers scholarships, training, and surgical missions by Kenyan-American CRNAs.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="donate.html" class="px-6 py-3 rounded-2xl bg-gradient-to-r from-[#0E4B9B] via-[#137347] to-[#C81E1E] font-semibold shadow-lg shadow-black/30">Donate Now</a>
+          <a href="mentorship.html" class="px-6 py-3 rounded-2xl glass border border-white/10 hover:bg-white/10">Explore Training</a>
+          <a href="join.html" class="px-6 py-3 rounded-2xl glass border border-white/10 hover:bg-white/10">Join AKANA</a>
+        </div>
+        <!-- live goal bar -->
+        <div class="mt-8 rounded-2xl glass border border-white/10 p-4">
+          <div class="flex items-center justify-between text-sm text-white/70">
+            <span>$52,400 raised</span><span>of $100,000 goal</span>
+          </div>
+          <div class="mt-2 h-3 w-full rounded-full bg-white/10 overflow-hidden">
+            <div class="h-3 bg-gradient-to-r from-[#0E4B9B] via-[#137347] to-[#C81E1E]" style="width:52%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPAIGN CAROUSEL -->
+  <section class="py-16">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl md:text-3xl font-bold">Featured Campaigns</h2>
+        <a href="donate.html" class="text-sm underline text-white/80">See all</a>
+      </div>
+      <div class="mt-8 flex gap-6 overflow-x-auto no-scrollbar snap-x">
+        <!-- card -->
+        <article class="snap-start min-w-[320px] md:min-w-[360px] rounded-3xl glass border border-white/10 p-5">
+          <img class="h-40 w-full object-cover rounded-2xl" src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1400&auto=format&fit=crop" alt="">
+          <h3 class="mt-4 text-xl font-semibold">Student Scholarships</h3>
+          <p class="mt-2 text-white/80 text-sm">Tuition support for Kenyan anesthesia students.</p>
+          <div class="mt-4 flex items-center justify-between text-xs text-white/70">
+            <span>$18,900 / $40k</span><span>47%</span>
+          </div>
+          <div class="mt-2 h-2 w-full rounded-full bg-white/10 overflow-hidden">
+            <div class="h-2 bg-[#137347]" style="width:47%"></div>
+          </div>
+          <a href="donate.html" class="mt-5 inline-block px-4 py-2 rounded-xl bg-white text-[#0B1F3A] font-semibold">Donate</a>
+        </article>
+
+        <article class="snap-start min-w-[320px] md:min-w-[360px] rounded-3xl glass border border-white/10 p-5">
+          <img class="h-40 w-full object-cover rounded-2xl" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1400&auto=format&fit=crop" alt="">
+          <h3 class="mt-4 text-xl font-semibold">Kenya Mission Equipment</h3>
+          <p class="mt-2 text-white/80 text-sm">Monitors, pumps & supplies for rural ORs.</p>
+          <div class="mt-4 flex items-center justify-between text-xs text-white/70">
+            <span>$21,500 / $35k</span><span>61%</span>
+          </div>
+          <div class="mt-2 h-2 w-full rounded-full bg-white/10 overflow-hidden">
+            <div class="h-2 bg-[#C81E1E]" style="width:61%"></div>
+          </div>
+          <a href="donate.html" class="mt-5 inline-block px-4 py-2 rounded-xl bg-white text-[#0B1F3A] font-semibold">Donate</a>
+        </article>
+
+        <article class="snap-start min-w-[320px] md:min-w-[360px] rounded-3xl glass border border-white/10 p-5">
+          <img class="h-40 w-full object-cover rounded-2xl" src="https://images.unsplash.com/photo-1580281657527-47df1412c1f1?q=80&w=1400&auto=format&fit=crop" alt="">
+          <h3 class="mt-4 text-xl font-semibold">Continuing Education</h3>
+          <p class="mt-2 text-white/80 text-sm">Self-paced CE modules & live workshops.</p>
+          <div class="mt-4 flex items-center justify-between text-xs text-white/70">
+            <span>$12,000 / $25k</span><span>48%</span>
+          </div>
+          <div class="mt-2 h-2 w-full rounded-full bg-white/10 overflow-hidden">
+            <div class="h-2 bg-[#0E4B9B]" style="width:48%"></div>
+          </div>
+          <a href="donate.html" class="mt-5 inline-block px-4 py-2 rounded-xl bg-white text-[#0B1F3A] font-semibold">Donate</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING TEASER -->
+  <section class="py-16 bg-[#0B1F3A]/60">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img class="rounded-3xl w-full object-cover border border-white/10" src="https://images.unsplash.com/photo-1583912267551-4ca6f0b95a7f?q=80&w=1600&auto=format&fit=crop" alt="">
+        <div>
+          <h2 class="text-3xl font-bold">Training & Mentorship</h2>
+          <p class="mt-3 text-white/80">Slides-based modules, quick 10-question quizzes, instant certificates, and mentor pairing for SRNAs.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="px-3 py-1 rounded-full bg-white/10 text-xs">Self-paced</span>
+            <span class="px-3 py-1 rounded-full bg-white/10 text-xs">Certificate</span>
+            <span class="px-3 py-1 rounded-full bg-white/10 text-xs">CE Ready</span>
+          </div>
+          <a href="mentorship.html" class="mt-6 inline-block px-5 py-3 rounded-2xl glass border border-white/10 hover:bg-white/10">Browse Courses</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS + NEWS PREVIEW -->
+  <section class="py-16">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <h3 class="text-2xl font-bold">Upcoming Events</h3>
+          <div class="mt-6 space-y-4">
+            <div class="glass border border-white/10 rounded-2xl p-4">
+              <div class="flex items-center justify-between">
+                <p class="font-semibold">AKANA Annual Conference 2026</p>
+                <span class="text-xs bg-white/10 px-2 py-1 rounded-full">NYC · Aug 15–17</span>
+              </div>
+              <a class="mt-2 inline-block text-sm underline text-white/80" href="events.html">Register →</a>
+            </div>
+            <div class="glass border border-white/10 rounded-2xl p-4">
+              <div class="flex items-center justify-between">
+                <p class="font-semibold">Virtual CE: Regional Anesthesia</p>
+                <span class="text-xs bg-white/10 px-2 py-1 rounded-full">Online · Mar 10</span>
+              </div>
+              <a class="mt-2 inline-block text-sm underline text-white/80" href="events.html">Register →</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold">Latest News</h3>
+          <div class="mt-6 space-y-4">
+            <div class="glass border border-white/10 rounded-2xl p-4">
+              <p class="font-semibold">Mentorship Program Launched</p>
+              <p class="text-white/80 text-sm mt-1">Pairing CRNAs with SRNAs for career support.</p>
+              <a class="mt-2 inline-block text-sm underline text-white/80" href="news.html">Read more →</a>
+            </div>
+            <div class="glass border border-white/10 rounded-2xl p-4">
+              <p class="font-semibold">Gala Raises $50,000</p>
+              <p class="text-white/80 text-sm mt-1">Scholarships and mission supplies funded.</p>
+              <a class="mt-2 inline-block text-sm underline text-white/80" href="news.html">Read more →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 py-14 grid md:grid-cols-4 gap-10 text-sm">
+      <div>
+        <img src="assets/akana-logo.png" class="h-10 w-auto" alt="">
+        <p class="mt-4 text-white/70">Association of Kenyan American Nurse Anesthetists — excellence, mentorship & global impact.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold">Explore</h4>
+        <ul class="mt-3 space-y-2 text-white/80">
+          <li><a href="join.html" class="hover:underline">Membership</a></li>
+          <li><a href="mentorship.html" class="hover:underline">Training</a></li>
+          <li><a href="events.html" class="hover:underline">Events</a></li>
+          <li><a href="news.html" class="hover:underline">News</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold">Support</h4>
+        <ul class="mt-3 space-y-2 text-white/80">
+          <li><a href="donate.html" class="hover:underline">Donate</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold">Contact</h4>
+        <p class="mt-3 text-white/80">info@akana.org • +1 234 567 890</p>
+        <p class="text-white/60 mt-2">Nairobi, KE • Washington DC, USA</p>
+      </div>
+    </div>
+    <div class="text-center text-white/60 text-xs pb-8">© 2025 AKANA. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // mobile menu
+    const chk = document.getElementById('nav');
+    const mob = document.getElementById('mobileMenu');
+    chk.addEventListener('change', ()=> mob.style.display = chk.checked ? 'block' : 'none');
+  </script>
+</body>
+</html>
